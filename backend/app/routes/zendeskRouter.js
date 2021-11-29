@@ -2,7 +2,7 @@ const express = require('express')
 const router  = express.Router()
 const { listTickets, fetchTicket } = require('../controllers/zendeskApi')
 
-router.get('/tickets', signin)
-router.get('/ticket/:id', signout)
+router.get('/tickets/list', listTickets)
+router.get('/tickets/:id', fetchTicket)
 
-module.exports = router;
+module.exports = router
